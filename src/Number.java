@@ -1,35 +1,80 @@
 import java.*;
-public class Number
-{
-    private int value;
+public class Number {
+    private int valueOne;
+    private int valueTwo;
+    private int valueMult= valueOne * valueTwo;
     private boolean parity;//1=even 0=odd
     private boolean isPrime;
     private int gcdValue;
     private int lcmValue;
+
     public Number()
     {
-        value = 0;
+        valueOne = 0;
+        valueTwo = 0;
     }
-    public Number(int prm)
+
+    public Number(int prmOne, int prmTwo)
     {
-        this.value = prm;
+        this.valueOne = prmOne;
+        this.valueTwo = prmTwo;
     }
-    public boolean parityCheck()
+
+    public boolean parityCheckOne()
     {
-        if(this.value % 2 == 0)return true;
+        if (this.valueOne % 2 == 0) return true;
         else return false;
     }
 
-    public void setParity()
+    public boolean parityCheckTwo()
     {
-        this.parity = parityCheck();
+        if (this.valueTwo % 2 == 0) return true;
+        else return false;
     }
 
-    public int getValue() {
-        return value;
+    public int getValueOne() {
+        return valueOne;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setValueOne(int valueOne) {
+        this.valueOne = valueOne;
+    }
+
+    public int getValueTwo() {
+        return valueTwo;
+    }
+
+    public void setValueTwo(int valueTwo) {
+        this.valueTwo = valueTwo;
+    }
+
+    public boolean isParity() {
+        return parity;
+    }
+
+    public void setParity(boolean parity) {
+        this.parity = parity;
+    }
+
+    public int getGcdValue() {
+        return gcdValue;
+    }
+
+    public void setGcdValue() {
+        this.gcdValue = computingGcdValue(valueOne,valueTwo);
+    }
+
+    public int getLcmValue() {
+        return lcmValue;
+    }
+
+    public void setLcmValue(int lcmValue) {
+        this.lcmValue = valueMult/getGcdValue();
+    }
+
+    public int computingGcdValue(int a, int b)
+    {
+        if (b == 0) return a;
+        return a % b == 0 ? b : computingGcdValue(b, a % b);
     }
 }
