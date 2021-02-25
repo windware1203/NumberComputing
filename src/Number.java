@@ -3,6 +3,7 @@ public class Number
 {
     private int value;
     private boolean parity;//1=even 0=odd
+    private boolean isPrime;
     private int gcdValue;
     private int lcmValue;
     public Number()
