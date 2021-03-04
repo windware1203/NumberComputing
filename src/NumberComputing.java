@@ -7,28 +7,37 @@ public class NumberComputing
     {
         Scanner buffer = new Scanner(System.in);
         int numCode;
-        System.out.printl("1:Odd/Even\n"+ 
-                          "2:Prime\n"+
-                          "3:GCD/LCM\n"+ 
-                          "enter the command code");
-                          
+        System.out.println( "0:End\n"+
+                            "1:Odd/Even\n"+
+                            "2:GCD/LCM\n"+
+                            "3:Prime\n"+
+                            "enter the command code");
         numCode = buffer.nextInt();
-        switch (numCode)
+        while (numCode!=0)
         {
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
+            switch (numCode)
+            {
+                case 1:
+                    ParityCheck taskOne = new ParityCheck();
+                    System.out.println(taskOne.toString());
+                    break;
+                case 2:
+                    GcdLcm taskTwo = new GcdLcm();
+                    System.out.println(taskTwo.toString());
+                    break;
+                case 3:
+                    PrimeNumber taskThree = new PrimeNumber();
+                    System.out.println(taskThree.toString());
+                    break;
+            }
+            System.out.println( "0:End\n"+
+                    "1:Odd/Even\n"+
+                    "2:GCD/LCM\n"+
+                    "3:Prime\n"+
+                    "enter the command code");
+            numCode = buffer.nextInt();
         }
-        /*
-        int valueOne=0;
-        int valueTwo=0;
-        valueOne = buffer.nextInt();
-        valueTwo = buffer.nextInt();
-        Number numberOne = new Number(valueOne,valueTwo);
-        */
+        System.out.println("----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
         buffer.close();
     }
 }
