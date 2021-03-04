@@ -16,8 +16,6 @@ public class NumberComputing
                 break;
             case 3:
                 break;
-            case 4:
-                break;
         }
         /*
         int valueOne=0;
