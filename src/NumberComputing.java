@@ -7,6 +7,7 @@ public class NumberComputing
     {
         Scanner buffer = new Scanner(System.in);
         int numCode;
+        System.out.printl("1:Odd/Even \n 2:Prime \n 3:GCD/LCM\n enter the command code");
         numCode = buffer.nextInt();
         switch (numCode)
         {
