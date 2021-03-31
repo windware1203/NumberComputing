@@ -5,14 +5,14 @@ public class NumberComputing
 {
     public static void main(String[] args)
     {
-        Scanner buffer = new Scanner(System.in);
+        Scanner bufferOne = new Scanner(System.in);
         int numCode;
         System.out.println( "0:End\n"+
                             "1:Odd/Even\n"+
                             "2:GCD/LCM\n"+
                             "3:Prime\n"+
                             "enter the command code");
-        numCode = buffer.nextInt();
+        numCode = bufferOne.nextInt();
         while (numCode!=0)
         {
             switch (numCode)
@@ -35,9 +35,11 @@ public class NumberComputing
                     "2:GCD/LCM\n"+
                     "3:Prime\n"+
                     "enter the command code");
-            numCode = buffer.nextInt();
+            Scanner bufferTwo = new Scanner(System.in);
+            numCode = bufferTwo.nextInt();
+            bufferTwo.close();
         }
         System.out.println("----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
-        buffer.close();
+        bufferOne.close();
     }
 }
