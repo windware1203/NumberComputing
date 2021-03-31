@@ -8,6 +8,7 @@ public class Eratosthenes implements PrimeNumber
     private String state;
     public Eratosthenes()
     {
+        System.out.println("Enter a number : ");
         Scanner buffer = new Scanner(System.in);
         num = buffer.nextInt();
         primeMaking();
