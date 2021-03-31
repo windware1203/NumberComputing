@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.*;
-public class PrimeNumber
+abstract class PrimeNumber
 {
     private int num;
     private ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -26,36 +26,7 @@ public class PrimeNumber
     }
 
     //sieve of Eratosthenes
-    public void primeMaking()
-    {
-        int pnarr[]=new int [1000];
-        pnarr[2] = 0;
-        int len = pnarr.length;
-        int k=2,tt=0;
-        while(tt < 1000)
-        {
-            for(int i=1; i<len; i++)
-            {
-                if(i%k==0&&i!=k) //
-                    pnarr[i]=1;
-            }
-
-            for(int i=1; i<len; i++)
-            {
-                if(i>k&&pnarr[i]==0)
-                {
-                    k=i;
-                    break;
-                }
-            }
-            tt++;
-        }
-
-        for (int i=1; i<len ;  i++)
-        {
-            if(pnarr[i]==0) arr.add(i);
-        }
-    }
+     public abstract void primeMaking();
 
     @Override
     public String toString()
