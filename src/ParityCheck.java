@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.lang.*;
 public class ParityCheck
 {
-    private int num;
+    private int num = 0;
     private  String parity;
     public ParityCheck()
     {

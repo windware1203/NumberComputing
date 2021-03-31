@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.lang.*;
 public class Eratosthenes implements PrimeNumber
 {
-    private int num;
+    private int num = 0;
     private ArrayList<Integer> arr = new ArrayList<Integer>();
     private String state;
     public Eratosthenes()

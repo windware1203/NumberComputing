@@ -6,7 +6,7 @@ public class NumberComputing
     public static void main(String[] args)
     {
         Scanner bufferOne = new Scanner(System.in);
-        int numCode;
+        int numCode = 0;
 
         boolean flag = true;
         do
