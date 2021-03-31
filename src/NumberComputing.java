@@ -9,7 +9,7 @@ public class NumberComputing
         int numCode = 0;
         Scanner bufferOne = new Scanner(System.in);
         boolean flag = true;
-        do
+        while (flag)
         {
             System.out.println( "0:End\n"+
                     "1:Odd/Even\n"+
@@ -41,8 +41,7 @@ public class NumberComputing
                     System.out.println("Error command code!\n" + "Please enter it again:");
                     break;
             }
-
-        }while (flag);
+        }
         bufferOne.close();
 
 
