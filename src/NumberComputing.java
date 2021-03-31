@@ -26,7 +26,7 @@ public class NumberComputing
                     System.out.println(taskTwo.toString());
                     break;
                 case 3:
-                    PrimeNumber taskThree = new PrimeNumber();
+                    Eratosthenes taskThree = new Eratosthenes();
                     System.out.println(taskThree.toString());
                     break;
             }

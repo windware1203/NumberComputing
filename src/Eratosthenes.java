@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.*;
-public class Eratosthenes
+public class Eratosthenes implements PrimeNumber
 {
     private int num;
     private ArrayList<Integer> arr = new ArrayList<Integer>();
