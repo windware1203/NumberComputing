@@ -22,6 +22,6 @@ public class ParityCheck
     @Override
     public String toString()
     {
-        return "This is a " + getParity() + "number\n";
+        return "This is a " + getParity() + "number";
     }
 }

@@ -5,9 +5,9 @@ public class NumberComputing
 {
     public static void main(String[] args)
     {
-        Scanner bufferOne = new Scanner(System.in);
-        int numCode = 0;
 
+        int numCode = 0;
+        Scanner bufferOne = new Scanner(System.in);
         boolean flag = true;
         do
         {
@@ -16,8 +16,10 @@ public class NumberComputing
                     "2:GCD/LCM\n"+
                     "3:Prime\n"+
                     "enter the command code");
-            numCode = bufferOne.nextInt();
-
+            if(bufferOne.hasNextInt())
+                numCode = bufferOne.nextInt();
+            else
+                break;
             switch (numCode)
             {
                 case 0:
@@ -39,9 +41,11 @@ public class NumberComputing
                     System.out.println("Error command code!\n" + "Please enter it again:");
                     break;
             }
-        }while (flag);bufferOne.close();
+
+        }while (flag);
+        bufferOne.close();
 
 
-        System.out.println("----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
+        System.out.println("\n----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
     }
 }
