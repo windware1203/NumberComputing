@@ -6,7 +6,7 @@ public class NumberComputing
     public static void main(String[] args)
     {
 
-        int numCode = 0;
+        String numCode ;
         Scanner bufferOne = new Scanner(System.in);
         boolean flag = true;
         while (flag)
@@ -16,24 +16,24 @@ public class NumberComputing
                     "2:GCD/LCM\n"+
                     "3:Prime\n"+
                     "enter the command code");
-            if(bufferOne.hasNextInt())
-                numCode = bufferOne.nextInt();
+            if(bufferOne.hasNextLine())
+                numCode = bufferOne.nextLine();
             else
                 break;
             switch (numCode)
             {
-                case 0:
+                case "0":
                     flag = false;
                     break;
-                case 1:
+                case "1":
                     ParityCheck taskOne = new ParityCheck();
                     System.out.println(taskOne.toString());
                     break;
-                case 2:
+                case "2":
                     GcdLcm taskTwo = new GcdLcm();
                     System.out.println(taskTwo.toString());
                     break;
-                case 3:
+                case "3":
                     Eratosthenes taskThree = new Eratosthenes();
                     System.out.println(taskThree.toString());
                     break;
