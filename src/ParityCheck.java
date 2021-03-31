@@ -8,8 +8,8 @@ public class ParityCheck
     {
         System.out.println("Enter a number : ");
         Scanner buffer = new Scanner(System.in);
+
         num = buffer.nextInt();
-        buffer.close();
         if(num % 2==0)parity = "Even ";
         else parity = "Odd ";
     }

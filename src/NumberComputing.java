@@ -5,21 +5,19 @@ public class NumberComputing
 {
     public static void main(String[] args)
     {
-
-        String numCode ;
         Scanner bufferOne = new Scanner(System.in);
+        String numCode ="";
+
         boolean flag = true;
         while (flag)
         {
+
             System.out.println( "0:End\n"+
                     "1:Odd/Even\n"+
                     "2:GCD/LCM\n"+
                     "3:Prime\n"+
                     "enter the command code");
-            if(bufferOne.hasNextLine())
-                numCode = bufferOne.nextLine();
-            else
-                break;
+            numCode = bufferOne.next();
             switch (numCode)
             {
                 case "0":
@@ -42,9 +40,9 @@ public class NumberComputing
                     break;
             }
         }
+
+
         bufferOne.close();
-
-
-        System.out.println("\n----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
+        System.out.println("\nEND-*-*-*-*-*\n----Thanks for using this system.\n"+"----Copyright\n----@Takeda Nana\n");
     }
 }
